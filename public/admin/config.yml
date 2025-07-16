@@ -2,7 +2,7 @@ backend:
   name: github
   repo: pmahajan3105/prashant-mahajan-blog
   branch: master
-  auth_type: implicit
+  auth_type: pkce
   app_id: Ov23liqWxSjU12KPiP70
 
 media_folder: "src/assets/images"
