@@ -1,43 +1,22 @@
 backend:
-  name: github
-  repo: pmahajan3105/prashant-mahajan-blog
+  name: git-gateway
   branch: master
-  squash_merges: true
 
 media_folder: "src/assets/images"
 public_folder: "/src/assets/images"
-
-# Site URL for preview links
-site_url: https://prashantmahajan.com
-display_url: https://prashantmahajan.com
-
-# Logo (optional)
-logo_url: https://prashantmahajan.com/favicon.svg
 
 collections:
   - name: "blog"
     label: "Blog Posts"
     folder: "src/data/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Author", name: "author", widget: "string", default: "Prashant Mahajan" }
-      - { label: "Publication Date", name: "pubDatetime", widget: "datetime" }
-      - { label: "Featured", name: "featured", widget: "boolean", default: false }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["product-management"] }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-# Enable editorial workflow (optional)
-# publish_mode: editorial_workflow
-
-# Show preview links
-show_preview_links: true
-
-# Slug encoding
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "-"
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string", default: "Prashant Mahajan"}
+      - {label: "Publish Date", name: "pubDatetime", widget: "datetime"}
+      - {label: "Featured Post", name: "featured", widget: "boolean", default: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
