@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: pmahajan3105/prashant-mahajan-blog
+  branch: master
+  auth_type: pkce
+  app_id: YOUR_GITHUB_APP_ID
+
+media_folder: "src/assets/images"
+public_folder: "/src/assets/images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/data/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "Prashant Mahajan" }
+      - { label: "Publication Date", name: "pubDatetime", widget: "datetime" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["product-management"] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+# Enable editorial workflow (optional)
+# publish_mode: editorial_workflow
+
+# Show preview links
+show_preview_links: true
+
+# Slug encoding
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
