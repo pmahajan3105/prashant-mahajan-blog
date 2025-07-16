@@ -1,0 +1,35 @@
+---
+export interface Props {
+  post: {
+    data: {
+      title: string;
+      description: string;
+      author: string;
+      pubDatetime: Date;
+      modDatetime?: Date;
+      tags: string[];
+    };
+    slug: string;
+  };
+}
+
+const { post } = Astro.props;
+const { title, description, author, pubDatetime, modDatetime, tags } = post.data;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "author": {
+    "@type": "Person", 
+    "name": author
+  },
+  "datePublished": pubDatetime.toISOString(),
+  "dateModified": (modDatetime || pubDatetime).toISOString(),
+  "url": `${Astro.site}/posts/${post.slug}/`,
+  "keywords": tags.join(", ")
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

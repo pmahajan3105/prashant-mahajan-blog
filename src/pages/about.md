@@ -3,35 +3,30 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+## Hi, I'm Prashant Mahajan
 
-![Astro Paper](public/astropaper-og.jpg)
+Product Manager turned founder. I write about product strategy, startup lessons, and building things that matter.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+### What I Write About
+- Product management frameworks and methodologies
+- Startup journey insights and lessons learned  
+- Tool recommendations and product reviews
+- Industry analysis and market trends
+- Data-driven decision making
+- Building products that solve real problems
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+### Background
+- 8+ years in Product Management across B2B and B2C products
+- Currently building innovative solutions in the tech space
+- Focus: Data-driven product strategy, user experience optimization, and growth strategies
+- Experience with early-stage startups to enterprise-level products
 
-## Features
+### My Approach
+I believe in building products that truly solve user problems. My writing focuses on practical frameworks, real-world case studies, and actionable insights you can apply immediately.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+Whether you're a fellow product manager, entrepreneur, or someone interested in the intersection of technology and business strategy, you'll find content here that challenges conventional thinking and provides concrete value.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+### Let's Connect
+I'm always interested in connecting with fellow product builders, entrepreneurs, and anyone passionate about creating meaningful solutions.
 
-and so much more.
-
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+*Connect with me on [LinkedIn](https://linkedin.com/in/prashantmahajan/) or reach out via [email](mailto:hello@prashantmahajan.com)*
