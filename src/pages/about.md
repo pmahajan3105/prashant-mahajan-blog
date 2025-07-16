@@ -3,6 +3,24 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
+import { Image } from "astro:assets";
+import prashantImage from "@/assets/images/prashant-mahajan.png";
+
+<div style="text-align: center; margin-bottom: 2rem;">
+  <Image
+    src={prashantImage}
+    alt="Prashant Mahajan - Product Manager and Entrepreneur"
+    width={300}
+    height={400}
+    format="webp"
+    loading="eager"
+    fetchpriority="high"
+    style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin: 0 auto;"
+  />
+  <h2 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.5rem; font-weight: 600;">Prashant Mahajan</h2>
+  <p style="color: #6b7280; font-size: 1.1rem; margin: 0;">Product Manager • Entrepreneur • Startup Advisor</p>
+</div>
+
 ## Hi, I'm Prashant Mahajan
 
 Product Manager turned founder. I write about product strategy, startup lessons, and building things that matter.
