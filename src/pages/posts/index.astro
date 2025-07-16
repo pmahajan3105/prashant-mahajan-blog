@@ -1,0 +1,84 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Hr from "@/components/Hr.astro";
+import Card from "@/components/Card.astro";
+import { SITE } from "@/config";
+import getSortedPosts from "@/utils/getSortedPosts";
+
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
+---
+
+<Layout title={`Posts | ${SITE.title}`}>
+  <Header />
+  <main id="main-content">
+    <section id="hero">
+      <h1 class="mr-2">Posts</h1>
+      <a
+        target="_blank"
+        href="/rss.xml"
+        class="rss-link"
+        aria-label="RSS Feed"
+        title="RSS Feed"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon">
+          <path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path>
+          <path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path>
+          <circle cx="6" cy="18" r="2"></circle>
+        </svg>
+      </a>
+    </section>
+
+    <Hr />
+
+    <section id="posts" class="pb-6 pt-12" aria-label="Blog Posts">
+      <ul class="posts-list">
+        {
+          sortedPosts.map((post) => (
+            <li class="post-item">
+              <Card {...post} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .posts-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .post-item {
+    margin: 0;
+  }
+
+  .rss-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: color 0.2s;
+  }
+
+  .rss-link:hover {
+    color: var(--color-accent);
+  }
+
+  .rss-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+  }
+</style>

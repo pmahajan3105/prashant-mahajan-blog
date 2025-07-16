@@ -1,0 +1,112 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Hr from "@/components/Hr.astro";
+import Card from "@/components/Card.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+type Props = {
+  post: CollectionEntry<"blog">;
+};
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
+
+const postIndex = sortedPosts.findIndex((p) => p.id === post.id);
+const prevPost = postIndex > 0 ? sortedPosts[postIndex - 1] : null;
+const nextPost = postIndex < sortedPosts.length - 1 ? sortedPosts[postIndex + 1] : null;
+
+const { title, author, description, pubDatetime, tags } = post.data;
+---
+
+<Layout
+  title={title}
+  author={author}
+  description={description}
+  pubDatetime={pubDatetime}
+  scrollSmooth={true}
+>
+  <Header />
+  <div class="mx-auto flex w-full max-w-app justify-center">
+    <button
+      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
+      onclick="history.back()"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+        <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+      </svg><span>Go back</span>
+    </button>
+  </div>
+  <main id="main-content" class="mx-auto w-full max-w-app px-4 pb-12">
+    <h1 class="text-2xl font-bold text-accent sm:text-3xl mb-4" transition:name={`title-${post.id}`}>
+      {title}
+    </h1>
+    <div class="text-sm text-skin-base opacity-75 mb-4">
+      <time datetime={pubDatetime.toISOString()}>
+        {pubDatetime.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long", 
+          day: "numeric",
+        })}
+      </time>
+      <span class="mx-2">•</span>
+      <span>By {author}</span>
+    </div>
+    
+    {tags && tags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-4">
+        {tags.map((tag) => (
+          <a href={`/tags/${tag}`} class="text-sm text-accent hover:underline">
+            #{tag}
+          </a>
+        ))}
+      </div>
+    )}
+
+    <Hr />
+
+    <article class="prose prose-lg max-w-none text-skin-base">
+      <Content />
+    </article>
+
+    <Hr />
+
+    <div class="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2">
+      {prevPost && (
+        <div class="flex flex-col">
+          <span class="text-sm text-skin-base opacity-75 mb-2">Previous</span>
+          <Card {...prevPost} />
+        </div>
+      )}
+      {nextPost && (
+        <div class="flex flex-col">
+          <span class="text-sm text-skin-base opacity-75 mb-2">Next</span>
+          <Card {...nextPost} />
+        </div>
+      )}
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+  }
+</style>
