@@ -30,10 +30,5 @@
       "destination": "/",
       "permanent": true
     }
-  ],
-  "functions": {
-    "app/api/edge.js": {
-      "runtime": "edge"
-    }
-  }
+  ]
 }
