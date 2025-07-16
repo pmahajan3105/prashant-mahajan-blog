@@ -4,4 +4,23 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-XSS-Protection: 1; mode=block
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com *.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com;
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com *.googletagmanager.com *.umami.is; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: *.gstatic.com *.googleapis.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com *.umami.is;
+
+# Static assets cache for 1 year
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images cache for 6 months  
+/assets/*
+  Cache-Control: public, max-age=15552000
+
+# Fonts cache for 1 year
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files cache for 1 hour
+*.html
+  Cache-Control: public, max-age=3600

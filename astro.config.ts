@@ -54,6 +54,16 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
+    build: {
+      cssCodeSplit: false,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['astro'],
+          },
+        },
+      },
+    },
   },
   image: {
     responsiveStyles: true,
@@ -61,6 +71,11 @@ export default defineConfig({
   },
   build: {
     inlineStylesheets: "auto",
+    assets: "_astro",
+  },
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "viewport",
   },
   env: {
     schema: {
