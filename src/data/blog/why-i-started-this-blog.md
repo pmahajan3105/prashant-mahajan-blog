@@ -8,6 +8,9 @@ tags:
   - product-management
   - startups
   - personal-journey
+  - travel
+  - AI
+  - random
 description: "Why I decided to share my product management insights and startup journey - lessons learned and frameworks that work."
 ---
 
