@@ -1,0 +1,58 @@
+backend:
+  name: github
+  repo: pmahajan3105/my-blog
+  branch: main
+  auth_type: pkce
+  app_id: YOUR_GITHUB_APP_ID
+
+# Optional: Use Netlify's Git Gateway for authentication
+# backend:
+#   name: git-gateway
+#   branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/src/assets/images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/data/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "Prashant Mahajan" }
+      - { label: "Publication Date", name: "pubDatetime", widget: "datetime" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["product-management"] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "src/pages/about.astro"
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "About" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Home"
+        name: "home"
+        file: "src/pages/index.astro"
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "Home" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+# Optional: Enable editorial workflow
+# publish_mode: editorial_workflow
+
+# Optional: Show preview links
+show_preview_links: true
+
+# Optional: Enable slug encoding
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
