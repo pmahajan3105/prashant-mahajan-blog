@@ -130,19 +130,6 @@ const structuredData = {
 
     <ClientRouter />
 
-    <!-- Google Analytics 4 -->
-    {import.meta.env.PROD && (
-      <>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-        <script is:inline>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'GA_MEASUREMENT_ID');
-        </script>
-      </>
-    )}
-
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
