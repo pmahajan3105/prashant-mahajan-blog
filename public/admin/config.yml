@@ -2,9 +2,17 @@ backend:
   name: github
   repo: pmahajan3105/prashant-mahajan-blog
   branch: master
+  squash_merges: true
 
 media_folder: "src/assets/images"
 public_folder: "/src/assets/images"
+
+# Site URL for preview links
+site_url: https://prashantmahajan.com
+display_url: https://prashantmahajan.com
+
+# Logo (optional)
+logo_url: https://prashantmahajan.com/favicon.svg
 
 collections:
   - name: "blog"
