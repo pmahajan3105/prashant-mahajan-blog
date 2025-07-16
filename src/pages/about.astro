@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import prashantImage from "@/assets/images/prashant-mahajan.png";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+
+const title = "About";
+const description = "Learn about Prashant Mahajan's journey in product management and entrepreneurship.";
+---
+
+<Layout title={`${title} | ${SITE.title}`} description={description}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content">
+    <section id="about" class="app-prose mb-28 max-w-app prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{title}</h1>
+      
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <Image
+          src={prashantImage}
+          alt="Prashant Mahajan - Product Manager and Entrepreneur"
+          width={300}
+          height={400}
+          format="webp"
+          loading="eager"
+          fetchpriority="high"
+          style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin: 0 auto;"
+        />
+        <h2 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.5rem; font-weight: 600;">Prashant Mahajan</h2>
+        <p style="color: #6b7280; font-size: 1.1rem; margin: 0;">Product Manager • Entrepreneur • Startup Advisor</p>
+      </div>
+
+      <h2>Hi, I'm Prashant Mahajan</h2>
+      <p>Product Manager turned founder. I write about product strategy, startup lessons, and building things that matter.</p>
+
+      <h3>What I Write About</h3>
+      <ul>
+        <li>Product management frameworks and methodologies</li>
+        <li>Startup journey insights and lessons learned</li>
+        <li>Tool recommendations and product reviews</li>
+        <li>Industry analysis and market trends</li>
+        <li>Data-driven decision making</li>
+        <li>Building products that solve real problems</li>
+      </ul>
+
+      <h3>Background</h3>
+      <ul>
+        <li>8+ years in Product Management across B2B and B2C products</li>
+        <li>Currently building innovative solutions in the tech space</li>
+        <li>Focus: Data-driven product strategy, user experience optimization, and growth strategies</li>
+        <li>Experience with early-stage startups to enterprise-level products</li>
+      </ul>
+
+      <h3>My Approach</h3>
+      <p>I believe in building products that truly solve user problems. My writing focuses on practical frameworks, real-world case studies, and actionable insights you can apply immediately.</p>
+
+      <p>Whether you're a fellow product manager, entrepreneur, or someone interested in the intersection of technology and business strategy, you'll find content here that challenges conventional thinking and provides concrete value.</p>
+
+      <h3>Let's Connect</h3>
+      <p>I'm always interested in connecting with fellow product builders, entrepreneurs, and anyone passionate about creating meaningful solutions.</p>
+
+      <p><em>Connect with me on <a href="https://www.linkedin.com/in/prashantmahajan31/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, follow me on <a href="https://x.com/Pmahajan3105" target="_blank" rel="noopener noreferrer">X</a>, check out my code on <a href="https://github.com/pmahajan3105" target="_blank" rel="noopener noreferrer">GitHub</a>, explore my thoughts on <a href="https://www.perplexity.ai/page/prashant-mahajan-Fq1SjY8kRFq.dHzE0q5JBw" target="_blank" rel="noopener noreferrer">Perplexity</a>, or reach out via <a href="mailto:pm@zeda.io">email</a></em></p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
