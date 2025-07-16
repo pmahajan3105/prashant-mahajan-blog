@@ -7,6 +7,7 @@ import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
+import IconPerplexity from "@/assets/icons/IconPerplexity.svg";
 import { SITE } from "@/config";
 
 interface Social {
@@ -34,6 +35,12 @@ export const SOCIALS: Social[] = [
     href: "https://github.com/pmahajan3105",
     linkTitle: `${SITE.title} on GitHub`,
     icon: IconGitHub,
+  },
+  {
+    name: "Perplexity",
+    href: "https://www.perplexity.ai/page/prashant-mahajan-Fq1SjY8kRFq.dHzE0q5JBw",
+    linkTitle: `${SITE.title} on Perplexity`,
+    icon: IconPerplexity,
   },
   {
     name: "Mail",
