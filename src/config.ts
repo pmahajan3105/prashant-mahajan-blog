@@ -4,17 +4,17 @@ export const SITE = {
   profile: "https://www.linkedin.com/in/prashantmahajan31/",
   desc: "Product management insights and startup journey - Building better products through data-driven decisions.",
   title: "Prashant's Blog",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
+  showArchives: false,
   showBackButton: true, // show back button in post detail
   editPost: {
     enabled: false, // disable edit button for now
     text: "Edit page",
-    url: "https://github.com/yourusername/your-blog/edit/main/",
+    url: "https://github.com/pmahajan3105/prashant-mahajan-blog/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
