@@ -144,27 +144,11 @@ const structuredData = {
     )}
 
     <script is:inline src="/toggle-theme.js"></script>
-    
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <slot />
     <SpeedInsights />
     <Analytics />
-    
-    <!-- Netlify Identity redirect handling -->
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
   </body>
 </html>
 
