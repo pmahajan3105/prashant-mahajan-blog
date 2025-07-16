@@ -66,7 +66,7 @@ I'm not just writing from the perspective of someone who's "made it." I'm active
 
 Product management is ultimately about solving real problems for real people. Whether you're a fellow PM, entrepreneur, or someone interested in building products that matter, I hope you'll find value in these insights.
 
-I'm always open to discussions, feedback, and learning from your experiences too. Feel free to reach out on [LinkedIn](https://linkedin.com/in/prashantmahajan/) or via [email](mailto:hello@prashantmahajan.com).
+I'm always open to discussions, feedback, and learning from your experiences too. Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/prashantmahajan31/) or via [email](mailto:pm@zeda.io).
 
 Let's build something great together.
 
