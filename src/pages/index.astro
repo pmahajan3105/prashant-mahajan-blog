@@ -25,37 +25,27 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+        Prashant Mahajan 
       </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        Hi, I'm Prashant Mahajan — a product leader turned founder, passionate about building AI-powered products that solve real problems. I founded and scaled Zeda.io from zero to $1M ARR, serving 100+ enterprise customers before a successful exit. My journey spans Paytm, Tokopedia, and Branch.io, where I built and scaled products for millions of users across the globe.
       </p>
       <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
+        <strong>What I write about:</strong>
+        <ul class="list-disc list-inside mt-1">
+          <li>Product strategy frameworks that work in practice</li>
+          <li>AI/ML product development from zero to scale</li>
+          <li>Startup lessons from the trenches</li>
+          <li>Leadership insights from managing distributed teams</li>
+          <li>Industry analysis on the future of product management and AI</li>
+        </ul>
+      </p>
+      <p class="mt-2">
+        <strong>Let's connect:</strong> <br />
+        <a href="https://linkedin.com/in/prashantmahajan31" class="underline hover:text-accent" target="_blank">LinkedIn</a> |
+        <a href="https://twitter.com/your-twitter" class="underline hover:text-accent" target="_blank">Twitter</a> |
+        <a href="mailto:mahajan3105@gmail.com" class="underline hover:text-accent">Email</a>
       </p>
       {
         // only display if at least one social link is enabled
