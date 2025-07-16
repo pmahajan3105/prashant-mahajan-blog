@@ -47,4 +47,4 @@ Whether you're a fellow product manager, entrepreneur, or someone interested in 
 ### Let's Connect
 I'm always interested in connecting with fellow product builders, entrepreneurs, and anyone passionate about creating meaningful solutions.
 
-*Connect with me on [LinkedIn](https://linkedin.com/in/prashantmahajan/) or reach out via [email](mailto:hello@prashantmahajan.com)*
+*Connect with me on [LinkedIn](https://www.linkedin.com/in/prashantmahajan31/), follow me on [X](https://x.com/Pmahajan3105), check out my code on [GitHub](https://github.com/pmahajan3105), or reach out via [email](mailto:pm@zeda.io)*

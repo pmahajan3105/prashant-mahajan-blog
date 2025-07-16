@@ -1,7 +1,7 @@
 export const SITE = {
   website: "https://prashantmahajan.com/", // replace this with your deployed domain
   author: "Prashant Mahajan",
-  profile: "https://linkedin.com/in/prashantmahajan/",
+  profile: "https://www.linkedin.com/in/prashantmahajan31/",
   desc: "Product management insights and startup journey - Building better products through data-driven decisions.",
   title: "Prashant's Blog",
   ogImage: "astropaper-og.jpg",
