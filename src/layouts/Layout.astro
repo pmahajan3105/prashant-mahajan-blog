@@ -130,6 +130,11 @@ const structuredData = {
 
     <ClientRouter />
 
+    <!-- Simple Analytics -->
+    {import.meta.env.PROD && (
+      <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    )}
+
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
